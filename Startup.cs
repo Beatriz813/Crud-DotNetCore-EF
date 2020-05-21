@@ -27,7 +27,6 @@ namespace ApiEF
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // string con = Configuration.GetConnectionString("LojaDB");
             services.AddDbContext<LojaContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("LojaDB")));
             services.AddControllers();
