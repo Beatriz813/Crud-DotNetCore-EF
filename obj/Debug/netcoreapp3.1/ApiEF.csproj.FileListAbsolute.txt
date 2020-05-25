@@ -78,3 +78,9 @@
 /home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll
 /home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.Design.dll
 /home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll
+/home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/beatriz/Público/Codes/C#/ApiEF/obj/Debug/netcoreapp3.1/ApiEF.MvcApplicationPartsAssemblyInfo.cs
+/home/beatriz/Público/Codes/C#/ApiEF/bin/Debug/netcoreapp3.1/FluentValidation.dll

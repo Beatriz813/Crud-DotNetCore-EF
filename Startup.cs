@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace ApiEF
 {
@@ -29,6 +30,9 @@ namespace ApiEF
         {
             services.AddDbContext<LojaContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("LojaDB")));
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new OpenApiInfo{ Title = "ApiEF", Version = "v1" });
+            });
             services.AddControllers();
         }
 
@@ -39,7 +43,11 @@ namespace ApiEF
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
 
+            app.UseSwaggerUI(s => {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiEF");
+            });
             app.UseHttpsRedirection();
 
             app.UseRouting();
