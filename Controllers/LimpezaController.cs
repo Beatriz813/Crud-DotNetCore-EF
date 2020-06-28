@@ -4,6 +4,7 @@ using ApiEF.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using ApiEF.Logica;
+using ApiEF.Validation;
 
 namespace ApiEF.Controllers {
     [ApiController]
@@ -23,9 +24,13 @@ namespace ApiEF.Controllers {
 
         [HttpPost]
         public IActionResult Post(Limpeza limpeza) {
-            var produto = context.Add(limpeza);
-            context.SaveChanges();
-            return Ok("Produto Adicionado");
+            var Validacao = new LimpezaValidation().Validate(limpeza);
+            if (Validacao.IsValid) {
+                var produto = context.Add(limpeza);
+                context.SaveChanges();
+                return Ok("Produto Adicionado");  
+            }
+            return BadRequest("Erro nos parametros");
         }
 
         [HttpPut]
